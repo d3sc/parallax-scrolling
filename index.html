@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parallax Scrolling Website</title>
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- My Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400&family=Montserrat:wght@500&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,600&family=Pacifico&family=Poppins:wght@100;200;300;400;500;600;700&family=Raleway:ital,wght@0,300;0,500;1,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Logo</a>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+    <section>
+      <img src="img/stars.png" id="stars" />
+      <img src="img/moon.png" id="moon" />
+      <img src="img/mountains_behind.png" id="mountains_behind" />
+      <h2 id="text">Moon Light</h2>
+      <a href="#sec" id="btn">Explore Now</a>
+      <img src="img/mountains_front.png" id="mountains_front" />
+    </section>
+
+    <div class="sec">
+      <h2 id="sec">Parallax Scrolling Effects</h2>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur soluta cum unde molestias dicta ex odio sunt repellat, voluptatum cumque officia quibusdam ipsa magnam at temporibus, vel illum sequi vero maiores. Sed optio commodi nisi,
+        veritatis ipsam pariatur eum nesciunt voluptatum harum. Quae iusto nemo minima, doloremque numquam commodi temporibus illum beatae perspiciatis incidunt voluptatum, fuga voluptatem consequatur! Libero amet eos doloremque molestias, eum
+        aliquid aspernatur nemo voluptatem laudantium iure. <br />
+        <br />
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum in fugiat vitae, qui unde corporis omnis illum porro, aliquid tempora perferendis dolorem ipsum labore officia quam velit. Libero dolore ut nostrum modi similique expedita.
+        Necessitatibus praesentium obcaecati ipsa nulla voluptates labore et nisi sapiente nobis, blanditiis nemo assumenda nostrum doloremque? <br />
+        <br />
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo officia obcaecati hic repudiandae a porro, unde deleniti minus laborum, blanditiis, temporibus dolorum placeat praesentium enim nesciunt quia error quo id animi quas eos
+        recusandae! Consectetur, quasi molestias tempora enim porro ullam cupiditate id modi saepe neque, voluptates deserunt! Doloribus veniam sed officia reprehenderit asperiores porro blanditiis saepe optio ducimus recusandae fugiat quod
+        consectetur, nisi aspernatur! Quo necessitatibus eos velit et! <br />
+        <br />
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex commodi magnam sapiente debitis id maiores quisquam dolorem, rerum fugiat sint voluptatem accusamus harum ea quidem eum. Ex minus debitis officiis velit rerum cupiditate, cumque
+        ipsam id labore atque unde laudantium!
+      </p>
+    </div>
+
+    <footer>
+      <h4>About me</h4>
+      <p class="footer-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam aliquam quasi dignissimos maxime <br /></p>
+      <hr />
+      <div class="footer-bottom">
+        <p class="footer-info-1"><i class="bx bx-copyright"></i> All Rights Reserved 2022.</p>
+        <p class="footer-info-2">Designed by <span>Descx</span></p>
+      </div>
+    </footer>
+
+    <script>
+      let stars = document.querySelector("#stars");
+      let moon = document.querySelector("#moon");
+      let mountains_behind = document.querySelector("#mountains_behind");
+      let text = document.querySelector("#text");
+      let btn = document.querySelector("#btn");
+      let mountains_front = document.querySelector("#mountains_front");
+      let header = document.querySelector("header");
+
+      //   window.addEventListener("scroll", () => {
+      //     let value = window.scrollY;
+      //     stars.style.left = value + "px";
+      //     // console.log(value);
+      //   });
+      let i = "-45";
+      setInterval(() => {
+        // console.log(i++);
+        stars.style.left = i++ + "px";
+        if (i == 20) {
+          i = -45;
+        }
+      }, 70);
+
+      window.addEventListener("scroll", () => {
+        let value = window.scrollY;
+
+        moon.style.top = value * 0.9 + "px";
+        mountains_behind.style.top = value * 0.5 + "px";
+        mountains_front.style.top = value * 0 + "px";
+        text.style.marginRight = value * 4 + "px";
+        text.style.marginTop = value * 1.2 + "px";
+        btn.style.marginTop = value * 1.2 + "px";
+        header.style.top = value * 0.8 + "px";
+      });
+    </script>
+  </body>
+</html>
