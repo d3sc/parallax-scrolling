@@ -14,6 +14,9 @@
       href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400&family=Montserrat:wght@500&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,600&family=Pacifico&family=Poppins:wght@100;200;300;400;500;600;700&family=Raleway:ital,wght@0,300;0,500;1,300&display=swap"
       rel="stylesheet"
     />
+
+    <!-- My Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
   </head>
   <body>
     <header>
@@ -53,6 +56,27 @@
       </p>
     </div>
 
+    <div class="container">
+      <div class="menu">
+        <div class="icons icons-up">
+          <i class="bx bx-home nav-active"></i>
+          <span><i class="bx bx-home"></i></span>
+        </div>
+        <div class="icons">
+          <i class="bx bx-chat"></i>
+          <span><i class="bx bx-chat"></i></span>
+        </div>
+        <div class="icons">
+          <i class="bx bx-heart"></i>
+          <span><i class="bx bx-heart"></i></span>
+        </div>
+        <div class="icons">
+          <i class="bx bx-user-circle"></i>
+          <span><i class="bx bx-user-circle"></i></span>
+        </div>
+      </div>
+    </div>
+
     <footer>
       <h4>About me</h4>
       <p class="footer-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam aliquam quasi dignissimos maxime <br /></p>
@@ -81,10 +105,10 @@
       setInterval(() => {
         // console.log(i++);
         stars.style.left = i++ + "px";
-        if (i == 20) {
+        if (i == 0) {
           i = -45;
         }
-      }, 70);
+      }, 80);
 
       window.addEventListener("scroll", () => {
         let value = window.scrollY;
@@ -96,6 +120,25 @@
         text.style.marginTop = value * 1.2 + "px";
         btn.style.marginTop = value * 1.2 + "px";
         header.style.top = value * 0.8 + "px";
+      });
+
+      const icons = document.querySelectorAll(".icons");
+      const navActive = document.querySelector(".nav-active");
+      setInterval(() => {
+        if (!icons[0].classList.contains("icons-up")) {
+          icons[0].classList.add("icons-up");
+        }
+      }, 10);
+
+      icons.forEach((i) => {
+        i.addEventListener("click", () => {
+          i.classList.toggle("icons-up");
+          setTimeout(() => {
+            if (i.classList.contains("icons-up")) {
+              i.classList.remove("icons-up");
+            }
+          }, 1000);
+        });
       });
     </script>
   </body>

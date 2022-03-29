@@ -175,7 +175,8 @@ footer hr {
 footer .footer-bottom {
   background-color: #1c0522;
   font-family: "Nunito";
-  padding: 40px;
+  padding-bottom: 100px;
+  padding-top: 40px;
   font-size: 1.1em;
   color: #ccc;
 }
@@ -192,6 +193,58 @@ footer .footer-bottom i {
   font-size: 1em;
 }
 
+/* .container {
+  width: 100%;
+  min-height: 100vh;
+  background: #f0e8e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.container .menu {
+  display: none;
+  position: fixed;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 10px 10px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-radius: 6px;
+  z-index: 10101;
+}
+@media (max-width: 500px) {
+  .container .menu {
+    display: flex;
+  }
+}
+
+.menu .icons {
+  padding: 20px 30px;
+  font-size: 30px;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease-out;
+}
+
+.menu .icons span {
+  position: absolute;
+  color: #ff5361;
+  width: 100%;
+  height: 100%;
+  padding: 20px 30px;
+  left: 0;
+  top: 100%;
+  border-bottom: 5px solid #ff5361;
+}
+
+.menu .icons-up {
+  transform: translateY(-100%);
+}
+
 @media (max-width: 500px) {
   body {
     overflow-x: hidden;
@@ -200,6 +253,10 @@ footer .footer-bottom i {
     /* display: none; */
     transform: translatey(10px);
     overflow-x: hidden;
+    font-size: 2.5em;
+  }
+  a#btn {
+    font-size: 1em;
   }
   header .logo {
     font-size: 1.8em;
