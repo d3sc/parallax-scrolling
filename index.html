@@ -20,7 +20,7 @@
   </head>
   <body>
     <header>
-      <a href="#" class="logo">Logo</a>
+      <a href="#" class="logo">Night</a>
       <ul>
         <li><a href="#" class="active">Home</a></li>
         <li><a href="#">About</a></li>
@@ -57,6 +57,7 @@
     </div>
 
     <div class="container">
+      <div class="tombol"><i class="bx bxs-up-arrow"></i></div>
       <div class="menu">
         <div class="icons icons-up">
           <i class="bx bx-home nav-active"></i>
@@ -113,6 +114,7 @@
       window.addEventListener("scroll", () => {
         let value = window.scrollY;
 
+        stars.style.top = value * 0.6 + "px";
         moon.style.top = value * 0.9 + "px";
         mountains_behind.style.top = value * 0.5 + "px";
         mountains_front.style.top = value * 0 + "px";
@@ -140,6 +142,47 @@
           }, 1000);
         });
       });
+
+      const tombol = document.querySelector(".tombol");
+      const menu = document.querySelector(".menu");
+
+      tombol.addEventListener("click", () => {
+        menu.classList.toggle("show-nav");
+        tombol.classList.toggle("close-tombol");
+      });
+
+      // Ini jika ingin menambahkan animasi
+      // let waktu = 2000;
+      // let waktu2 = 300;
+      // let gerakAwal = "20px";
+      // let gerakAkhir = "0px";
+
+      // function cek() {
+      //   if (tombol.classList.contains("close-tombol")) {
+      //     waktu = 0;
+      //     waktu2 = 0;
+      //     // tombol.style.position = "fixed";
+      //     // tombol.style.bottom = "60px";
+      //     gerakAkhir = "0px";
+      //     gerakAkhir = "60px";
+      //     // console.log("if jalan");
+      //   } else if (!tombol.classList.contains("close-tombol")) {
+      //     waktu = 4000;
+      //     waktu2 = 300;
+      //     gerakAwal = "0px";
+      //     gerakAkhir = "0px";
+      //   }
+      // }
+
+      // setInterval(() => {
+      //   cek();
+      //   // console.log("waktu berjalan");
+      //   gerakAwal = "20px";
+      //   tombol.style.bottom = gerakAwal;
+      //   setTimeout(() => {
+      //     tombol.style.bottom = gerakAkhir;
+      //   }, waktu2);
+      // }, waktu);
     </script>
   </body>
 </html>

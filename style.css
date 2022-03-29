@@ -108,6 +108,7 @@ section img#mountains_front {
   font-size: 7.5vw;
   z-index: 9;
   transform: translateX(850px);
+  /* transition: all 0.5s ease-in-out; */
 }
 
 a#btn {
@@ -122,6 +123,12 @@ a#btn {
   z-index: 9;
   transform: translateY(100px);
   text-align: center;
+  transition: color 0.3s ease-in-out;
+}
+a#btn:hover {
+  box-shadow: 0 0 10px 4px #1c0522;
+  background-color: #1c0522;
+  color: #fff;
 }
 
 .sec {
@@ -205,7 +212,7 @@ footer .footer-bottom i {
 .container .menu {
   display: none;
   position: fixed;
-  bottom: 0px;
+  bottom: -90px;
   left: 50%;
   transform: translateX(-50%);
   justify-content: center;
@@ -214,7 +221,13 @@ footer .footer-bottom i {
   box-shadow: 0 10px 10px 0px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   border-radius: 6px;
-  z-index: 10101;
+  z-index: 20;
+  transition: all 0.4s ease;
+}
+.menu.show-nav {
+  position: fixed;
+  bottom: 0px;
+  /* left: 43%; */
 }
 @media (max-width: 500px) {
   .container .menu {
@@ -245,13 +258,48 @@ footer .footer-bottom i {
   transform: translateY(-100%);
 }
 
+.tombol {
+  display: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 60px;
+  background-color: #ccc;
+  text-align: center;
+  position: fixed;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: black;
+  font-size: 2em;
+  cursor: pointer;
+  /* transform: rotate(180deg); */
+  z-index: 30;
+  transition: all 0.4s ease;
+}
+.tombol:hover {
+  box-shadow: 0 0 10px 4px #1c0522;
+  background-color: #1c0522;
+  color: #fff;
+}
+@media (max-width: 500px) {
+  .tombol {
+    display: block;
+  }
+}
+.tombol.close-tombol {
+  position: fixed;
+  bottom: 60px;
+  left: 43%;
+  transform: rotate(180deg);
+}
+
 @media (max-width: 500px) {
   body {
     overflow-x: hidden;
   }
   #text {
     /* display: none; */
-    transform: translatey(10px);
+    transform: translateY(10px);
     overflow-x: hidden;
     font-size: 2.5em;
   }
