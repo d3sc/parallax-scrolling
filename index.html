@@ -57,7 +57,7 @@
     </div>
 
     <div class="container">
-      <div class="tombol"><i class="bx bxs-up-arrow"></i></div>
+      <div class="tombol tombol-animate"><i class="bx bxs-up-arrow"></i></div>
       <div class="menu">
         <div class="icons icons-up">
           <i class="bx bx-home nav-active"></i>
@@ -149,40 +149,20 @@
       tombol.addEventListener("click", () => {
         menu.classList.toggle("show-nav");
         tombol.classList.toggle("close-tombol");
+        if (tombol.classList.contains("tombol-animate")) {
+          // tombol.style.transform = "transleteX(60px)";
+          // console.log("remove");
+          tombol.classList.remove("tombol-animate");
+        }
+        // Aktifkan Else untuk terus menjalankan animasi
+
+        // } else {
+        //   // console.log("add");
+        //   // tombol.style.transform = "transleteX(0px)";
+        //   // tombol.style.bottom = "0px";
+        //   tombol.classList.add("tombol-animate");
+        // }
       });
-
-      // Ini jika ingin menambahkan animasi
-      // let waktu = 2000;
-      // let waktu2 = 300;
-      // let gerakAwal = "20px";
-      // let gerakAkhir = "0px";
-
-      // function cek() {
-      //   if (tombol.classList.contains("close-tombol")) {
-      //     waktu = 0;
-      //     waktu2 = 0;
-      //     // tombol.style.position = "fixed";
-      //     // tombol.style.bottom = "60px";
-      //     gerakAkhir = "0px";
-      //     gerakAkhir = "60px";
-      //     // console.log("if jalan");
-      //   } else if (!tombol.classList.contains("close-tombol")) {
-      //     waktu = 4000;
-      //     waktu2 = 300;
-      //     gerakAwal = "0px";
-      //     gerakAkhir = "0px";
-      //   }
-      // }
-
-      // setInterval(() => {
-      //   cek();
-      //   // console.log("waktu berjalan");
-      //   gerakAwal = "20px";
-      //   tombol.style.bottom = gerakAwal;
-      //   setTimeout(() => {
-      //     tombol.style.bottom = gerakAkhir;
-      //   }, waktu2);
-      // }, waktu);
     </script>
   </body>
 </html>

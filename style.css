@@ -26,6 +26,7 @@ header {
 
 header .logo {
   color: #fff;
+  font-family: "CozetteVector";
   font-weight: 700;
   text-decoration: none;
   font-size: 2em;
@@ -47,6 +48,8 @@ header ul li {
 }
 
 header ul li a {
+  font-family: "CozetteVector";
+  font-size: 1.2em;
   text-decoration: none;
   padding: 6px 15px;
   color: #fff;
@@ -103,6 +106,7 @@ section img#mountains_front {
 
 #text {
   position: absolute;
+  font-family: "CozetteVector";
   color: #fff;
   white-space: nowrap;
   font-size: 7.5vw;
@@ -117,6 +121,7 @@ a#btn {
   padding: 8px 30px;
   border-radius: 40px;
   background: #fff;
+  font-family: "CozetteVector";
   color: #2b1055;
   font-size: 1.5em;
   font-weight: 600;
@@ -276,8 +281,14 @@ footer .footer-bottom i {
   z-index: 30;
   transition: all 0.4s ease;
 }
+
+.tombol-animate {
+  animation: tombol 1.5s infinite;
+  transition: all 0.4s ease;
+}
+
 .tombol:hover {
-  box-shadow: 0 0 10px 4px #1c0522;
+  /* box-shadow: 0 0 10px 4px #2b1055; */
   background-color: #1c0522;
   color: #fff;
 }
@@ -291,6 +302,24 @@ footer .footer-bottom i {
   bottom: 60px;
   left: 43%;
   transform: rotate(180deg);
+}
+
+@keyframes tombol {
+  0% {
+    bottom: 0px;
+  }
+  40% {
+    bottom: 0px;
+  }
+  70% {
+    bottom: 10px;
+  }
+  /* 80% {
+  bottom: 5px;
+  } */
+  100% {
+    bottom: 0px;
+  }
 }
 
 @media (max-width: 500px) {
