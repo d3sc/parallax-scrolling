@@ -177,7 +177,7 @@
         const body = document.querySelector("body");
         const mode = document.querySelector(".logo");
         let session = "";
-        if (sec >= 50) {
+        if (hrs >= 12) {
           session = "PM";
           mode.innerHTML = `${hrs} : ${min} : ${sec} ` + session;
           if (session == "PM") {
