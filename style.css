@@ -26,7 +26,7 @@ header {
 
 header .logo {
   color: #fff;
-  font-family: "CozetteVector";
+  /* font-family: "CozetteVector"; */
   font-weight: 700;
   text-decoration: none;
   font-size: 2em;
@@ -48,7 +48,7 @@ header ul li {
 }
 
 header ul li a {
-  font-family: "CozetteVector";
+  /* font-family: "CozetteVector"; */
   font-size: 1.2em;
   text-decoration: none;
   padding: 6px 15px;
@@ -106,7 +106,7 @@ section img#mountains_front {
 
 #text {
   position: absolute;
-  font-family: "CozetteVector";
+  /* font-family: "CozetteVector"; */
   color: #fff;
   white-space: nowrap;
   font-size: 7.5vw;
@@ -121,7 +121,7 @@ a#btn {
   padding: 8px 30px;
   border-radius: 40px;
   background: #fff;
-  font-family: "CozetteVector";
+  /* font-family: "CozetteVector"; */
   color: #2b1055;
   font-size: 1.5em;
   font-weight: 600;
