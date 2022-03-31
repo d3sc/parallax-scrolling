@@ -29,7 +29,7 @@ header .logo {
   /* font-family: "CozetteVector"; */
   font-weight: 700;
   text-decoration: none;
-  font-size: 2em;
+  font-size: 1.8em;
   text-transform: uppercase;
   letter-spacing: 2px;
   z-index: 1000;
@@ -148,6 +148,13 @@ a#btn:hover {
   font-size: 3em;
   margin-bottom: 20px;
   word-spacing: 3px;
+}
+
+.sec h3 {
+  font-size: 1.8em;
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: 600;
 }
 
 .sec p {
@@ -336,7 +343,7 @@ footer .footer-bottom i {
     font-size: 1em;
   }
   header .logo {
-    font-size: 1.8em;
+    font-size: 1.5em;
     position: absolute;
     left: 10px;
   }
@@ -349,6 +356,9 @@ footer .footer-bottom i {
   .sec h2 {
     font-size: 2em;
     text-align: center;
+  }
+  .sec h3 {
+    font-size: 1.2em;
   }
   .sec p {
     font-size: 0.9em;
