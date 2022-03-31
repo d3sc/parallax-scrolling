@@ -177,7 +177,7 @@
         const body = document.querySelector("body");
         const mode = document.querySelector(".logo");
         let session = "";
-        if (hrs >= 12) {
+        if (sec >= 50) {
           session = "PM";
           mode.innerHTML = `${hrs} : ${min} : ${sec} ` + session;
           if (session == "PM") {
@@ -190,7 +190,7 @@
           session = "AM";
           mode.innerHTML = `${hrs} : ${min} : ${sec} ` + session;
           if (session == "AM") {
-            body.style.background = "#ccc";
+            body.style.background = "linear-gradient(#ccc, #9af1f5)";
             text.innerHTML = "Sun Light";
             stars.style.display = "none";
             // console.log("halo");
