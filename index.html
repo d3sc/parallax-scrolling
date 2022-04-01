@@ -30,6 +30,7 @@
     </header>
     <section>
       <img src="img/stars.png" id="stars" />
+      <img src="img/cloud-remove3-1.png" id="cloud" />
       <img src="img/moon.png" id="moon" />
       <img src="img/mountains_behind.png" id="mountains_behind" />
       <h2 id="text">Moon Light</h2>
@@ -92,6 +93,7 @@
 
     <script>
       let stars = document.querySelector("#stars");
+      let cloud = document.querySelector("#cloud");
       let moon = document.querySelector("#moon");
       let mountains_behind = document.querySelector("#mountains_behind");
       let text = document.querySelector("#text");
@@ -104,19 +106,31 @@
       //     stars.style.left = value + "px";
       //     // console.log(value);
       //   });
-      let i = "-45";
+      let iStars = "-45";
       setInterval(() => {
         // console.log(i++);
-        stars.style.left = i++ + "px";
-        if (i == 0) {
-          i = -45;
+        stars.style.left = iStars++ + "px";
+        // cloud.style.left = iCloud++ + "px";
+        if (iStars == 0) {
+          iStars = -45;
         }
       }, 80);
+
+      let iCloud = "0";
+      setInterval(() => {
+        // console.log(i++);
+        // stars.style.left = iStars++ + "px";
+        cloud.style.left = iCloud++ + "px";
+        if (iCloud == 5) {
+          iCloud = -5;
+        }
+      }, 400);
 
       window.addEventListener("scroll", () => {
         let value = window.scrollY;
 
         stars.style.top = value * 0.6 + "px";
+        cloud.style.top = value * 0.6 + "px";
         moon.style.top = value * 0.9 + "px";
         mountains_behind.style.top = value * 0.5 + "px";
         mountains_front.style.top = value * 0 + "px";
@@ -190,7 +204,7 @@
           session = "AM";
           mode.innerHTML = `${hrs} : ${min} : ${sec} ` + session;
           if (session == "AM") {
-            body.style.background = "linear-gradient(#ccc, #9af1f5)";
+            body.style.background = "linear-gradient(#0a58ca, #9af1f5)";
             text.innerHTML = "Sun Light";
             stars.style.display = "none";
             // console.log("halo");

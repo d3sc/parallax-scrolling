@@ -96,6 +96,11 @@ section img {
   pointer-events: none;
 }
 
+section img#cloud {
+  width: 100%;
+  mix-blend-mode: screen;
+}
+
 section img#moon {
   mix-blend-mode: screen;
 }
