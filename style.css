@@ -123,13 +123,13 @@ section img#mountains_front {
 a#btn {
   display: inline-block;
   text-decoration: none;
-  padding: 8px 30px;
+  padding: 10px 35px;
   border-radius: 40px;
   background: #fff;
   /* font-family: "CozetteVector"; */
   color: #2b1055;
-  font-size: 1.5em;
-  font-weight: 600;
+  font-size: 1.6em;
+  font-weight: 400;
   z-index: 9;
   transform: translateY(100px);
   text-align: center;
@@ -345,7 +345,8 @@ footer .footer-bottom i {
     font-size: 2.5em;
   }
   a#btn {
-    font-size: 1em;
+    font-size: 1.3em;
+    font-weight: 500;
   }
   header .logo {
     font-size: 1.5em;
